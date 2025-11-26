@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #ffffff;
+  color: #171412;
+  min-height: 100vh;
+}
+
+/* Encabezado */
+.encabezado {
+  border-bottom: 1px solid #e5e8eb;
+  padding: 12px 40px 13px;
+}
+
+.contenedor-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-izquierda {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nombre-marca {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #171412;
+}
+
+.navegacion {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.navegacion a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #171412;
+  text-decoration: none;
+}
+
+.nav-derecha {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.buscador-header {
+  display: flex;
+  align-items: center;
+  background-color: #f5f2f0;
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+  min-width: 160px;
+  max-width: 256px;
+}
+
+.buscador-header svg {
+  flex-shrink: 0;
+}
+
+.buscador-header input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8a7361;
+  margin-left: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.buscador-header input::placeholder {
+  color: #8a7361;
+}
+
+.botones-auth {
+  display: flex;
+  gap: 8px;
+}
+
+.boton {
+  height: 40px;
+  min-width: 84px;
+  max-width: 480px;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #171412;
+  border: none;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.boton-primario {
+  background-color: #f57a26;
+}
+
+.boton-secundario {
+  background-color: #f5f2f0;
+}
+
+/* Hero */
+.hero {
+  padding: 16px;
+  margin: 20px 160px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-contenido {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../images/hero.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 117px 133px;
+  position: relative;
+}
+
+.hero-titulo {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+
+.hero-subtitulo {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+  max-width: 661px;
+  margin-bottom: 40px;
+}
+
+.buscador-hero {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e5dedb;
+  width: 480px;
+}
+
+.buscador-icono {
+  padding: 1px 0 1px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e5dedb;
+}
+
+.buscador-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8a7361;
+  padding: 9px 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.buscador-input::placeholder {
+  color: #8a7361;
+}
+
+.boton-buscar {
+  height: 48px;
+  min-width: 84px;
+  background-color: #f57a26;
+  border-radius: 8px;
+  border: none;
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #171412;
+  cursor: pointer;
+  margin: 1px 8px 1px 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Contenido principal */
+.contenido-principal {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.seccion {
+  padding: 0 16px;
+}
+
+.titulo-seccion {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: #171412;
+  padding: 20px 0 12px;
+}
+
+/* Destinos */
+.grid-destinos {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+}
+
+.tarjeta {
+  flex: 1;
+  min-width: 240px;
+}
+
+.tarjeta-imagen {
+  width: 100%;
+  height: 142px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.tarjeta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tarjeta-titulo {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #171412;
+}
+
+.tarjeta-descripcion {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #8a7361;
+}
+
+/* Experiencias */
+.grid-experiencias {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+}
+
+.tarjeta-experiencia {
+  width: 301px;
+  padding-bottom: 12px;
+}
+
+.tarjeta-imagen-experiencia {
+  width: 100%;
+  height: 169px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Footer */
+.pie {
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.pie-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.pie-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-nav a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8a7361;
+  text-decoration: none;
+  min-width: 160px;
+  text-align: center;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.red-social {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8a7361;
+  text-align: center;
+}

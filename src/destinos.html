@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorador de destinos - Wanderlust</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/destinos.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="contenedor-encabezado">
+        <div class="nav-izquierda">
+          <div class="logo">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M8 1.33334L14.6667 8L8 14.6667L1.33334 8L8 1.33334Z"
+                fill="#171412"
+              />
+            </svg>
+            <span class="nombre-marca">Wanderlust</span>
+          </div>
+          <nav class="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="#">Blog</a>
+            <a href="#">Reserva tu aventura</a>
+          </nav>
+        </div>
+        <div class="nav-derecha">
+          <div class="buscador-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                stroke="#8a7361"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input type="text" placeholder="Search" />
+          </div>
+          <div class="botones-auth">
+            <button class="boton boton-primario">Iniciar sesión</button>
+            <button class="boton boton-secundario">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="contenido-principal">
+      <section class="seccion-titulo">
+        <h1 class="titulo-principal">Encuentra tu próxima aventura</h1>
+      </section>
+
+      <section class="seccion-buscador">
+        <div class="buscador-principal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+              stroke="#8a7361"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="Busca  destinos o actividades"
+            class="input-buscador"
+          />
+        </div>
+      </section>
+
+      <section class="seccion-filtros">
+        <div class="filtros">
+          <button class="filtro">Continente</button>
+          <button class="filtro">Tipo de viaje</button>
+          <button class="filtro">Duración</button>
+          <button class="filtro">Presupuesto</button>
+          <button class="filtro">Actividades</button>
+          <button class="filtro">Clima</button>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h2 class="titulo-seccion">Destinos populares</h2>
+        <div class="grid-destinos-populares">
+          <div class="tarjeta-destino">
+            <img
+              src="images/patagonia.png"
+              alt="Patagonia, Chile"
+              class="imagen-destino"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Patagonia, Chile</h3>
+              <p class="descripcion-destino">Aventura en la naturaleza</p>
+            </div>
+          </div>
+          <div class="tarjeta-destino">
+            <img
+              src="images/bali.png"
+              alt="Bali, Indonesia"
+              class="imagen-destino"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Bali, Indonesia</h3>
+              <p class="descripcion-destino">Relajación en la playa</p>
+            </div>
+          </div>
+          <div class="tarjeta-destino">
+            <img
+              src="images/roma.png"
+              alt="Roma, Italia"
+              class="imagen-destino"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Roma, Italia</h3>
+              <p class="descripcion-destino">Historia y cultura</p>
+            </div>
+          </div>
+          <div class="tarjeta-destino">
+            <img
+              src="images/amazonas.png"
+              alt="Amazonas, Brasil"
+              class="imagen-destino"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Amazonas, Brasil</h3>
+              <p class="descripcion-destino">Exploración de la selva</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h2 class="titulo-seccion">Destinos recomendados</h2>
+        <div class="grid-destinos-recomendados">
+          <div class="tarjeta-recomendado">
+            <img
+              src="images/machu-picchu.png"
+              alt="Machu Picchu, Perú"
+              class="imagen-recomendado"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Machu Picchu, Perú</h3>
+              <p class="descripcion-destino">Explora las ruinas incas</p>
+            </div>
+          </div>
+          <div class="tarjeta-recomendado">
+            <img
+              src="images/santorini.png"
+              alt="Santorini, Grecia"
+              class="imagen-recomendado"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Santorini, Grecia</h3>
+              <p class="descripcion-destino">Disfruta de las vistas al mar</p>
+            </div>
+          </div>
+          <div class="tarjeta-recomendado">
+            <img
+              src="images/kioto.png"
+              alt="Kioto, Japón"
+              class="imagen-recomendado"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Kioto, Japón</h3>
+              <p class="descripcion-destino">
+                Sumérgete en la cultura japonesa
+              </p>
+            </div>
+          </div>
+          <div class="tarjeta-recomendado">
+            <img
+              src="images/banff.png"
+              alt="Parque Nacional Banff, Canadá"
+              class="imagen-recomendado"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Parque Nacional Banff, Canadá</h3>
+              <p class="descripcion-destino">
+                Descubre la belleza de las montañas
+              </p>
+            </div>
+          </div>
+          <div class="tarjeta-recomendado">
+            <img
+              src="images/fiordos.png"
+              alt="Fiordos Noruegos, Noruega"
+              class="imagen-recomendado"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Fiordos Noruegos, Noruega</h3>
+              <p class="descripcion-destino">Navega por los fiordos</p>
+            </div>
+          </div>
+          <div class="tarjeta-recomendado">
+            <img
+              src="images/isla-pascua.png"
+              alt="Isla de Pascua, Chile"
+              class="imagen-recomendado"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Isla de Pascua, Chile</h3>
+              <p class="descripcion-destino">
+                Descubre los misterios de la isla
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
