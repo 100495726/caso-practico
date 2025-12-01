@@ -145,3 +145,92 @@
   border-radius: 8px;
   margin-bottom: 12px;
 }
+
+/* ==================== RESPONSIVE - TABLET (768px - 1024px) ==================== */
+@media (max-width: 1024px) {
+  .titulo-principal {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .grid-destinos-populares {
+    padding: 12px;
+  }
+
+  .tarjeta-destino {
+    min-width: 200px;
+  }
+
+  .grid-destinos-recomendados {
+    padding: 12px;
+    justify-content: center;
+  }
+
+  .tarjeta-recomendado {
+    width: calc(33.33% - 8px);
+    min-width: 150px;
+  }
+}
+
+/* ==================== RESPONSIVE - MOBILE (hasta 767px) ==================== */
+@media (max-width: 767px) {
+  .seccion-titulo {
+    padding: 12px;
+  }
+
+  .titulo-principal {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .seccion-buscador {
+    padding: 8px 12px;
+  }
+
+  .buscador-principal {
+    padding: 8px 12px;
+  }
+
+  .seccion-filtros {
+    padding: 8px 12px;
+  }
+
+  .filtros {
+    gap: 8px;
+  }
+
+  .filtro {
+    font-size: 12px;
+    padding: 0 12px;
+    height: 28px;
+  }
+
+  .grid-destinos-populares {
+    flex-direction: column;
+    padding: 8px 12px;
+    overflow-x: visible;
+  }
+
+  .tarjeta-destino {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .imagen-destino {
+    height: 180px;
+  }
+
+  .grid-destinos-recomendados {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .tarjeta-recomendado {
+    width: calc(50% - 4px);
+    min-width: calc(50% - 4px);
+  }
+
+  .imagen-recomendado {
+    height: 120px;
+  }
+}

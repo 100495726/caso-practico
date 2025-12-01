@@ -16,7 +16,7 @@
     <header class="encabezado">
       <div class="contenedor-encabezado">
         <div class="nav-izquierda">
-          <div class="logo">
+          <a href="/src/index.html" class="logo">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
                 d="M8 1.33334L14.6667 8L8 14.6667L1.33334 8L8 1.33334Z"
@@ -24,11 +24,11 @@
               />
             </svg>
             <span class="nombre-marca">Wanderlust</span>
-          </div>
+          </a>
           <nav class="navegacion">
             <a href="/src/destinos.html">Destinos</a>
             <a href="/src/experiencias.html">Experiencias</a>
-            <a href="/src/blog.html">Blog</a>
+            <a href="/src/comunidad.html">Comunidad</a>
             <a href="/src/reserva.html">Reserva tu aventura</a>
           </nav>
         </div>
@@ -46,12 +46,55 @@
             <input type="text" placeholder="Search" />
           </div>
           <div class="botones-auth">
-            <button class="boton boton-primario">Iniciar sesión</button>
-            <button class="boton boton-secundario">Registrarse</button>
+            <a href="/src/login.html" class="boton boton-primario"
+              >Iniciar sesión</a
+            >
+            <a href="/src/register.html" class="boton boton-secundario"
+              >Registrarse</a
+            >
           </div>
+          <!-- Botón menú hamburguesa -->
+          <button class="menu-hamburguesa" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </header>
+
+    <!-- Overlay del menú móvil -->
+    <div class="menu-overlay"></div>
+
+    <!-- Menú móvil -->
+    <nav class="menu-movil">
+      <div class="navegacion-movil">
+        <a href="/src/destinos.html">Destinos</a>
+        <a href="/src/experiencias.html">Experiencias</a>
+        <a href="/src/comunidad.html">Comunidad</a>
+        <a href="/src/reserva.html">Reserva tu aventura</a>
+      </div>
+      <div class="buscador-movil">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+            stroke="#8a7361"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <input type="text" placeholder="Buscar..." />
+      </div>
+      <div class="botones-movil">
+        <a href="/src/login.html" class="boton boton-primario"
+          >Iniciar sesión</a
+        >
+        <a href="/src/register.html" class="boton boton-secundario"
+          >Registrarse</a
+        >
+      </div>
+    </nav>
 
     <main class="contenido-principal">
       <section class="hero">
@@ -131,11 +174,11 @@
       <section class="seccion">
         <h2 class="titulo-seccion">Experiencias destacadas</h2>
         <div class="grid-experiencias">
-          <div class="tarjeta-experiencia">
+          <div class="tarjeta">
             <img
               src="images/alpes.png"
               alt="Senderismo en los Alpes"
-              class="tarjeta-imagen-experiencia"
+              class="tarjeta-imagen"
             />
             <div class="tarjeta-info">
               <h3 class="tarjeta-titulo">Senderismo en los Alpes</h3>
@@ -144,11 +187,11 @@
               </p>
             </div>
           </div>
-          <div class="tarjeta-experiencia">
+          <div class="tarjeta">
             <img
               src="images/buceo.png"
               alt="Buceo en la Gran Barrera de Coral"
-              class="tarjeta-imagen-experiencia"
+              class="tarjeta-imagen"
             />
             <div class="tarjeta-info">
               <h3 class="tarjeta-titulo">Buceo en la Gran Barrera de Coral</h3>
@@ -157,11 +200,11 @@
               </p>
             </div>
           </div>
-          <div class="tarjeta-experiencia">
+          <div class="tarjeta">
             <img
               src="images/safari.png"
               alt="Safari en el Serengeti"
-              class="tarjeta-imagen-experiencia"
+              class="tarjeta-imagen"
             />
             <div class="tarjeta-info">
               <h3 class="tarjeta-titulo">Safari en el Serengeti</h3>
@@ -174,9 +217,9 @@
       </section>
     </main>
 
-    <footer class="pie">
-      <div class="pie-contenedor">
-        <nav class="pie-nav">
+    <footer>
+      <div class="footer-contenedor">
+        <nav class="footer-nav">
           <a href="#">Acerca de</a>
           <a href="#">Servicios</a>
           <a href="#">Contacto</a>
@@ -214,9 +257,10 @@
           </a>
         </div>
         <p class="copyright">
-          © 2023 Wanderlust. Todos los derechos reservados.
+          © 2025 Wanderlust. Todos los derechos reservados.
         </p>
       </div>
     </footer>
+    <script src="script/index.js"></script>
   </body>
 </html>
