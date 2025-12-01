@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="style/destinos.css" />
   </head>
   <body>
-    <header class="encabezado">
-      <div class="contenedor-encabezado">
+    <header>
+      <div class="contenedor-header">
         <div class="nav-izquierda">
           <a href="/src/index.html" class="logo">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -28,8 +28,8 @@
           </a>
           <nav class="navegacion">
             <a href="/src/destinos.html">Destinos</a>
-            <a href="/src/experiencias.html">Experiencias</a>
             <a href="/src/comunidad.html">Comunidad</a>
+            <a href="/src/recursos.html">Recursos</a>
             <a href="/src/reserva.html">Reserva tu aventura</a>
           </nav>
         </div>
@@ -47,8 +47,12 @@
             <input type="text" placeholder="Search" />
           </div>
           <div class="botones-auth">
-            <button class="boton boton-primario">Iniciar sesión</button>
-            <button class="boton boton-secundario">Registrarse</button>
+            <a href="/src/login.html" class="boton boton-primario"
+              >Iniciar sesión</a
+            >
+            <a href="/src/register.html" class="boton boton-secundario"
+              >Registrarse</a
+            >
           </div>
           <!-- Botón menú hamburguesa -->
           <button class="menu-hamburguesa" aria-label="Abrir menú">
@@ -67,8 +71,8 @@
     <nav class="menu-movil">
       <div class="navegacion-movil">
         <a href="/src/destinos.html">Destinos</a>
-        <a href="/src/experiencias.html">Experiencias</a>
         <a href="/src/comunidad.html">Comunidad</a>
+        <a href="/src/recursos.html">Recursos</a>
         <a href="/src/reserva.html">Reserva tu aventura</a>
       </div>
       <div class="buscador-movil">

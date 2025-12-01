@@ -86,20 +86,16 @@
 
 /* Destinos populares */
 .grid-destinos-populares {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  padding: 16px;
+  padding: 16px 0px;
   overflow-x: auto;
-}
-
-.tarjeta-destino {
-  min-width: 240px;
-  flex: 1;
 }
 
 .imagen-destino {
   width: 100%;
-  height: 135px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 16px;
@@ -127,20 +123,20 @@
 
 /* Destinos recomendados */
 .grid-destinos-recomendados {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  padding: 16px;
-  flex-wrap: wrap;
+  padding: 16px 0px;
 }
 
 .tarjeta-recomendado {
-  width: 176px;
+  width: 300px;
   padding-bottom: 12px;
 }
 
 .imagen-recomendado {
   width: 100%;
-  height: 99px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 12px;

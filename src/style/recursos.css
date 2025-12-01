@@ -1,0 +1,179 @@
+/* Sección título */
+.seccion-titulo {
+  padding: 16px;
+}
+
+.titulo-principal {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #171412;
+}
+
+/* Secciones de recursos */
+.seccion-recursos {
+  padding: 0 16px;
+  margin-bottom: 20px;
+}
+
+.subtitulo-seccion {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #171412;
+  padding: 16px 0 8px;
+}
+
+/* Grid de tarjetas */
+.grid-tarjetas {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.tarjeta-recurso {
+  flex: 1;
+  min-width: 280px;
+  max-width: 301px;
+  background-color: #ffffff;
+  border: 1px solid #e5dedb;
+  border-radius: 8px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icono-recurso {
+  width: 24px;
+  height: 24px;
+}
+
+.contenido-recurso {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titulo-recurso {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #171412;
+}
+
+.descripcion-recurso {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #8a7361;
+}
+
+/* FAQ */
+.lista-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.faq-item {
+  background-color: #ffffff;
+  border: 1px solid #e5dedb;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.faq-pregunta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-pregunta::-webkit-details-marker {
+  display: none;
+}
+
+.faq-pregunta span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #171412;
+}
+
+.faq-pregunta svg {
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-pregunta svg {
+  transform: rotate(180deg);
+}
+
+.faq-respuesta {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #8a7361;
+  padding: 8px 0 16px;
+}
+
+/* ==================== RESPONSIVE - TABLET (768px - 1024px) ==================== */
+*/ @media (max-width: 1024px) {
+  .titulo-principal {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .grid-tarjetas {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tarjeta-recurso {
+    min-width: calc(50% - 6px);
+    max-width: calc(50% - 6px);
+  }
+}
+
+/* ==================== RESPONSIVE - MOBILE (hasta 767px) ==================== */
+@media (max-width: 767px) {
+  .seccion-titulo {
+    padding: 12px;
+  }
+
+  .titulo-principal {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .seccion-recursos {
+    padding: 0 12px;
+  }
+
+  .subtitulo-seccion {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .grid-tarjetas {
+    flex-direction: column;
+    padding: 12px 0;
+  }
+
+  .tarjeta-recurso {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .lista-faq {
+    padding: 12px 0;
+  }
+
+  .faq-pregunta span {
+    font-size: 13px;
+  }
+}
