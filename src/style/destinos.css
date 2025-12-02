@@ -150,21 +150,22 @@
   }
 
   .grid-destinos-populares {
-    padding: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 12px 0;
   }
 
   .tarjeta-destino {
-    min-width: 200px;
+    min-width: 0;
   }
 
   .grid-destinos-recomendados {
-    padding: 12px;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 12px 0;
   }
 
   .tarjeta-recomendado {
-    width: calc(33.33% - 8px);
-    min-width: 150px;
+    width: 100%;
+    min-width: 0;
   }
 }
 
@@ -202,14 +203,40 @@
   }
 
   .grid-destinos-populares {
-    flex-direction: column;
-    padding: 8px 12px;
-    overflow-x: visible;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8px 0;
+    gap: 10px;
   }
 
   .tarjeta-destino {
     width: 100%;
-    min-width: 100%;
+    min-width: 0;
+  }
+
+  .imagen-destino {
+    height: 140px;
+  }
+
+  .grid-destinos-recomendados {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8px 0;
+    gap: 10px;
+  }
+
+  .tarjeta-recomendado {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .imagen-recomendado {
+    height: 120px;
+  }
+}
+
+/* ==================== RESPONSIVE - MOBILE PEQUEÑO (hasta 480px) ==================== */
+@media (max-width: 480px) {
+  .grid-destinos-populares {
+    grid-template-columns: 1fr;
   }
 
   .imagen-destino {
@@ -217,16 +244,10 @@
   }
 
   .grid-destinos-recomendados {
-    padding: 8px 12px;
-    gap: 8px;
-  }
-
-  .tarjeta-recomendado {
-    width: calc(50% - 4px);
-    min-width: calc(50% - 4px);
+    grid-template-columns: 1fr;
   }
 
   .imagen-recomendado {
-    height: 120px;
+    height: 160px;
   }
 }

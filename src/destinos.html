@@ -30,7 +30,6 @@
             <a href="/src/destinos.html">Destinos</a>
             <a href="/src/comunidad.html">Comunidad</a>
             <a href="/src/recursos.html">Recursos</a>
-            <a href="/src/reserva.html">Reserva tu aventura</a>
           </nav>
         </div>
         <div class="nav-derecha">
@@ -69,11 +68,21 @@
 
     <!-- Menú móvil -->
     <nav class="menu-movil">
+      <button class="menu-cerrar" aria-label="Cerrar menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18 6L6 18M6 6L18 18"
+            stroke="#171412"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
       <div class="navegacion-movil">
         <a href="/src/destinos.html">Destinos</a>
         <a href="/src/comunidad.html">Comunidad</a>
         <a href="/src/recursos.html">Recursos</a>
-        <a href="/src/reserva.html">Reserva tu aventura</a>
       </div>
       <div class="buscador-movil">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -137,6 +146,19 @@
         <div class="grid-destinos-populares">
           <div class="tarjeta-destino">
             <img
+              src="images/destinos/tailandia.webp"
+              alt="Tailandia"
+              class="imagen-destino"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Tailandia</h3>
+              <p class="descripcion-destino">
+                Explora templos antiguos y playas exóticas
+              </p>
+            </div>
+          </div>
+          <div class="tarjeta-destino">
+            <img
               src="images/destinos/patagonia.webp"
               alt="Patagonia, Chile"
               class="imagen-destino"
@@ -159,24 +181,15 @@
           </div>
           <div class="tarjeta-destino">
             <img
-              src="images/destinos/roma.webp"
-              alt="Roma, Italia"
+              src="images/destinos/sahara.png"
+              alt="Desierto del Sahara"
               class="imagen-destino"
             />
             <div class="info-destino">
-              <h3 class="titulo-destino">Roma, Italia</h3>
-              <p class="descripcion-destino">Historia y cultura</p>
-            </div>
-          </div>
-          <div class="tarjeta-destino">
-            <img
-              src="images/destinos/amazonas.png"
-              alt="Amazonas, Brasil"
-              class="imagen-destino"
-            />
-            <div class="info-destino">
-              <h3 class="titulo-destino">Amazonas, Brasil</h3>
-              <p class="descripcion-destino">Exploración de la selva</p>
+              <h3 class="titulo-destino">Desierto del Sahara</h3>
+              <p class="descripcion-destino">
+                Atrévete a cruzar el vasto desierto
+              </p>
             </div>
           </div>
         </div>
@@ -222,6 +235,30 @@
           </div>
           <div class="tarjeta-recomendado">
             <img
+              src="images/destinos/roma.webp"
+              alt="Roma, Italia"
+              class="imagen-recomendado"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Roma, Italia</h3>
+              <p class="descripcion-destino">Descubre la historia y el arte</p>
+            </div>
+          </div>
+          <div class="tarjeta-recomendado">
+            <img
+              src="images/destinos/amazonas.png"
+              alt="Amazonas, Brasil"
+              class="imagen-recomendado"
+            />
+            <div class="info-destino">
+              <h3 class="titulo-destino">Amazonas, Brasil</h3>
+              <p class="descripcion-destino">
+                Explora la increíble selva amazónica
+              </p>
+            </div>
+          </div>
+          <div class="tarjeta-recomendado">
+            <img
               src="images/destinos/banff.webp"
               alt="Parque Nacional Banff, Canadá"
               class="imagen-recomendado"
@@ -240,7 +277,7 @@
               class="imagen-recomendado"
             />
             <div class="info-destino">
-              <h3 class="titulo-destino">Fiordos Noruegos, Noruega</h3>
+              <h3 class="titulo-destino">Fiordos Noruegos</h3>
               <p class="descripcion-destino">Navega por los fiordos</p>
             </div>
           </div>

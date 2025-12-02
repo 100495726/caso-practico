@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuHamburguesa = document.querySelector(".menu-hamburguesa");
   const menuMovil = document.querySelector(".menu-movil");
   const menuOverlay = document.querySelector(".menu-overlay");
+  const menuCerrar = document.querySelector(".menu-cerrar");
   const body = document.body;
 
   // Función para abrir/cerrar el menú
@@ -18,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener para el botón hamburguesa
   if (menuHamburguesa) {
     menuHamburguesa.addEventListener("click", toggleMenu);
+  }
+
+  // Event listener para el botón cerrar
+  if (menuCerrar) {
+    menuCerrar.addEventListener("click", toggleMenu);
   }
 
   // Cerrar menú al hacer clic en el overlay

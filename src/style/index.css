@@ -83,7 +83,8 @@ header {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1001;
+  z-index: 1002;
+  position: relative;
 }
 
 .menu-hamburguesa span {
@@ -93,6 +94,7 @@ header {
   background-color: var(--color-texto);
   border-radius: 2px;
   transition: all 0.3s ease;
+  transform-origin: center;
 }
 
 .menu-hamburguesa.activo span:nth-child(1) {
@@ -136,7 +138,7 @@ header {
   height: 100%;
   background-color: #ffffff;
   z-index: 1000;
-  padding: 80px 24px 24px;
+  padding: 24px;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   overflow-y: auto;
@@ -146,11 +148,33 @@ header {
   right: 0;
 }
 
+/* Botón cerrar menú */
+.menu-cerrar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.menu-cerrar:hover {
+  background-color: #f5f2f0;
+}
+
 .menu-movil .navegacion-movil {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-bottom: 32px;
+  gap: 12px;
+  margin-bottom: 24px;
+  margin-top: 48px;
 }
 
 .menu-movil .navegacion-movil a {
@@ -160,7 +184,6 @@ header {
   color: var(--color-texto);
   text-decoration: none;
   padding: 8px 0;
-  border-bottom: 1px solid #e5e8eb;
 }
 
 .menu-movil .navegacion-movil a:hover {
