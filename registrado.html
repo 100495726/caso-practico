@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zona privada - Wanderlust</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style/index.css" />
+    <style>
+      .registrado-wrap { max-width: 960px; margin: 2rem auto; padding: 1.5rem; background: #fff; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+      .registrado-wrap h1 { font-size: 1.8rem; margin: 0 0 .5rem; }
+      .registrado-dato { color: #6b5a4f; margin: .25rem 0; }
+    </style>
+  </head>
+  <body class="pagina-registrado">
+    <header>
+      <!-- Cabecera igual al resto de páginas -->
+      <div class="contenedor-header">
+        <div class="nav-izquierda">
+          <a href="index.html" class="logo">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33334L14.6667 8L8 14.6667L1.33334 8L8 1.33334Z" fill="#171412"/></svg>
+            <span class="nombre-marca">Wanderlust</span>
+          </a>
+          <nav class="navegacion">
+            <a href="destinos.html">Destinos</a>
+            <a href="comunidad.html">Comunidad</a>
+            <a href="recursos.html">Recursos</a>
+          </nav>
+        </div>
+        <div class="nav-derecha">
+          <div class="buscador-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#8a7361" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <input type="text" placeholder="Search" />
+          </div>
+          <div class="botones-auth"></div>
+          <button class="menu-hamburguesa" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu-overlay"></div>
+    <nav class="menu-movil">
+      <button class="menu-cerrar" aria-label="Cerrar menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18" stroke="#171412" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="navegacion-movil">
+        <a href="destinos.html">Destinos</a>
+        <a href="comunidad.html">Comunidad</a>
+        <a href="recursos.html">Recursos</a>
+      </div>
+      <div class="buscador-movil">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#8a7361" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <input type="text" placeholder="Buscar..." />
+      </div>
+      <div class="botones-movil">
+        <a href="login.html" class="boton boton-primario">Iniciar sesión</a>
+        <a href="registro.html" class="boton boton-secundario">Registrarse</a>
+      </div>
+    </nav>
+
+    <main class="contenido-principal">
+      <section class="registrado-wrap">
+        <h1 id="saludo-usuario">¡Hola!</h1>
+        <p class="registrado-dato">Email: <span id="email-usuario">—</span></p>
+        <p class="registrado-dato">Has accedido a una zona protegida. 🎉</p>
+        <div style="margin-top:1rem">
+          <a class="boton boton-secundario" href="index.html">Volver a inicio</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-contenedor">
+        <nav class="footer-nav">
+          <a href="#">Acerca de</a><a href="#">Servicios</a><a href="#">Contacto</a><a href="#">Política de privacidad</a>
+        </nav>
+        <p class="copyright">© 2025 Wanderlust. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Tu script principal -->
+    <script src="script/index.js"></script>
+  </body>
+</html>
