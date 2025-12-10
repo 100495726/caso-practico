@@ -198,65 +198,6 @@
   transform: scale(0.98);
 }
 
-/* Separador */
-.login-separador {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: #9ca3af;
-  text-align: center;
-  padding: 24px 0 16px;
-  position: relative;
-}
-
-.login-separador::before,
-.login-separador::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 28%;
-  height: 1px;
-  background-color: #e5e8eb;
-}
-
-.login-separador::before {
-  left: 0;
-}
-
-.login-separador::after {
-  right: 0;
-}
-
-/* Botones sociales */
-.botones-sociales {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.boton-social {
-  flex: 1;
-  min-width: 140px;
-  background-color: #f8f9fa;
-  border: 1px solid #e5e8eb;
-  border-radius: 10px;
-  height: 44px;
-  padding: 0 16px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
-  color: #121217;
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.boton-social:hover {
-  background-color: #ffffff;
-  border-color: #d1d5db;
-}
-
 /* Enlace registro */
 .registro-link {
   display: flex;
@@ -358,19 +299,5 @@
   .boton-login-submit {
     height: 48px;
     margin-top: 12px;
-  }
-
-  .botones-sociales {
-    flex-direction: column;
-  }
-
-  .boton-social {
-    width: 100%;
-    height: 46px;
-  }
-
-  .login-separador::before,
-  .login-separador::after {
-    width: 25%;
   }
 }
