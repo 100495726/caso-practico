@@ -55,11 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// --- Gestión de usuarios y autenticación ---
 const STORAGE = {
   USER_KEY: "usuarioDatos",
-  PASS_KEY: "usuarioPass",        // (solo práctica)
-  EMAIL_KEY: "usuario",           // último email usado
-  USERS_LIST: "usuariosMSF",      // histórico para evitar duplicados
+  PASS_KEY: "usuarioPass", // (solo práctica)
+  EMAIL_KEY: "usuario", // último email usado
+  USERS_LIST: "usuariosMSF", // histórico para evitar duplicados
   SESSION: "sesionActiva",
 };
 
@@ -70,11 +72,13 @@ function isFileProtocol() {
 // --- Cookies ---
 function readCookie(name) {
   const pref = name + "=";
-  return document.cookie
-    .split(";")
-    .map((c) => c.trim())
-    .find((c) => c.indexOf(pref) === 0)
-    ?.substring(pref.length) || null;
+  return (
+    document.cookie
+      .split(";")
+      .map((c) => c.trim())
+      .find((c) => c.indexOf(pref) === 0)
+      ?.substring(pref.length) || null
+  );
 }
 function writeUserCookie(userObj, days = 30) {
   if (isFileProtocol()) return;
@@ -92,11 +96,17 @@ function getStoredUser() {
   let datos = null;
   const rawLS = localStorage.getItem(STORAGE.USER_KEY);
   if (rawLS) {
-    try { datos = JSON.parse(rawLS); } catch {}
+    try {
+      datos = JSON.parse(rawLS);
+    } catch {}
   }
   if (!datos && !isFileProtocol()) {
     const raw = readCookie("usuarioRegistrado");
-    if (raw) { try { datos = JSON.parse(decodeURIComponent(raw)); } catch {} }
+    if (raw) {
+      try {
+        datos = JSON.parse(decodeURIComponent(raw));
+      } catch {}
+    }
   }
   return datos;
 }
@@ -119,7 +129,8 @@ function renderHeaderAuth() {
 
   if (isLoggedIn()) {
     const u = getStoredUser() || {};
-    const nombre = [u.nombre, u.apellido].filter(Boolean).join(" ") || "Usuario";
+    const nombre =
+      [u.nombre, u.apellido].filter(Boolean).join(" ") || "Usuario";
     box.innerHTML = `
       <span class="usuario-saludo" style="margin-right:.5rem">Hola, ${nombre}</span>
       <button id="btn-logout" class="boton boton-secundario">Cerrar sesión</button>
@@ -160,14 +171,27 @@ function attachRegister() {
     const pass2 = pass2El?.value || "";
 
     // Validaciones mínimas (alineadas con la práctica)
-    if (!nombre || !apellido) return alert("Nombre y apellido son obligatorios.");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return alert("Email no válido.");
-    if (pass.length < 8) return alert("La contraseña debe tener al menos 8 caracteres.");
+    if (!nombre || !apellido)
+      return alert("Nombre y apellido son obligatorios.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      return alert("Email no válido.");
+    if (pass.length < 8)
+      return alert("La contraseña debe tener al menos 8 caracteres.");
     if (pass !== pass2) return alert("Las contraseñas no coinciden.");
 
     // Evitar duplicados por email (como en el proyecto anterior)
-    const lista = (() => { try { return JSON.parse(localStorage.getItem(STORAGE.USERS_LIST)) || []; } catch { return []; }})();
-    if (lista.some(u => String(u.email || "").toLowerCase() === email.toLowerCase())) {
+    const lista = (() => {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE.USERS_LIST)) || [];
+      } catch {
+        return [];
+      }
+    })();
+    if (
+      lista.some(
+        (u) => String(u.email || "").toLowerCase() === email.toLowerCase()
+      )
+    ) {
       return alert("Ya existe un usuario registrado con ese email.");
     }
 
@@ -232,7 +256,6 @@ function attachLogin() {
   });
 }
 
-
 // --- Protección y pintado para registrado.html ---
 function protectRegistrado() {
   if (!document.body.classList.contains("pagina-registrado")) return;
@@ -250,8 +273,6 @@ function renderRegistrado() {
   if (emailSpan) emailSpan.textContent = email;
 }
 
-
-
 // --- Inicialización global ---
 document.addEventListener("DOMContentLoaded", () => {
   attachRegister();
@@ -266,5 +287,3 @@ document.addEventListener("DOMContentLoaded", () => {
 window.requireAuth = function (redirectTo = "index.html") {
   if (!isLoggedIn()) location.href = redirectTo;
 };
-
-
