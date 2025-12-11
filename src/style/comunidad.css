@@ -1,7 +1,8 @@
 /* Sección título */
 .seccion-titulo {
-  padding: 16px;
+  padding: 32px 16px 24px;
   margin-bottom: 12px;
+  max-width: 800px;
 }
 
 .titulo-principal {
@@ -14,8 +15,8 @@
 
 .subtitulo {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 24px;
   color: #8a7361;
 }
 
@@ -38,9 +39,20 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 16px;
-  padding: 16px 0px;
+  gap: 24px;
+  padding: 20px;
   margin-bottom: 16px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #f5f2f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.articulo-blog:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #e5dedb;
 }
 
 .contenido-articulo {
@@ -48,14 +60,19 @@
   max-width: 608px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .titulo-articulo {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 24px;
   color: #171412;
+  transition: color 0.3s ease;
+}
+
+.articulo-blog:hover .titulo-articulo {
+  color: var(--color-primario);
 }
 
 .texto-articulo {
@@ -68,7 +85,7 @@
 .imagen-articulo {
   flex: 1;
   min-width: 300px;
-  height: 171px;
+  height: 200px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -77,6 +94,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.articulo-blog:hover .imagen-articulo img {
+  transform: scale(1.05);
 }
 
 /* Foros */
@@ -84,10 +106,20 @@
   display: flex;
   gap: 16px;
   align-items: center;
-  padding: 8px 0px;
+  padding: 16px;
   background-color: white;
   min-height: 72px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #f5f2f0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.foro-item:hover {
+  background-color: #fafafa;
+  border-color: #e5dedb;
+  transform: translateX(4px);
 }
 
 .icono-foro {
@@ -99,12 +131,18 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.foro-item:hover .icono-foro {
+  background-color: #ffe8d6;
 }
 
 .info-foro {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 4px;
 }
 
 .titulo-foro {
@@ -112,6 +150,11 @@
   font-size: 16px;
   line-height: 24px;
   color: #171412;
+  transition: color 0.3s ease;
+}
+
+.foro-item:hover .titulo-foro {
+  color: var(--color-primario);
 }
 
 .respuestas-foro {
@@ -132,6 +175,8 @@
 .fila-galeria {
   display: flex;
   gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
 }
 
 .foto-galeria {
@@ -139,6 +184,15 @@
   height: 176px;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.foto-galeria:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 
 /* Formulario */
@@ -170,6 +224,13 @@
   line-height: 24px;
   color: #171412;
   font-family: "Plus Jakarta Sans", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-campo:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(245, 122, 38, 0.1);
 }
 
 .input-campo::placeholder {
@@ -187,6 +248,13 @@
   color: #171412;
   font-family: "Plus Jakarta Sans", sans-serif;
   resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textarea-campo:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(245, 122, 38, 0.1);
 }
 
 .contenedor-boton {
