@@ -293,8 +293,8 @@ header {
 
 /* Hero */
 .hero {
-  padding: 16px;
-  margin: 20px 160px;
+  padding: 32px 16px;
+  margin: 0px 160px 40px;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -303,53 +303,86 @@ header {
 .hero-contenido {
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.4)
+      rgba(23, 20, 18, 0.6),
+      rgba(23, 20, 18, 0.3)
     ),
     url("../images/hero.png");
   background-size: cover;
   background-position: center;
-  border-radius: 8px;
-  height: 480px;
+  border-radius: 16px;
+  height: 520px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 117px 133px;
+  padding: 60px 80px;
   position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.hero-contenido::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
 }
 
 .hero-titulo {
   font-weight: 800;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 56px;
+  line-height: 64px;
   text-align: center;
   color: white;
   letter-spacing: -2px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-subtitulo {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 28px;
   text-align: center;
   color: white;
   max-width: 661px;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 .buscador-hero {
   display: flex;
   align-items: center;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid #e5dedb;
-  width: 480px;
+  width: 520px;
+  max-width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.buscador-hero:focus-within {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 .buscador-icono {
-  padding: 1px 0 1px 16px;
+  padding: 1px 8px 1px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -362,9 +395,10 @@ header {
   outline: none;
   font-size: 16px;
   line-height: 24px;
-  color: #8a7361;
-  padding: 9px 8px;
+  color: var(--color-texto);
+  padding: 12px 10px;
   font-family: "Plus Jakarta Sans", sans-serif;
+  background: transparent;
 }
 
 .buscador-input::placeholder {
@@ -373,21 +407,28 @@ header {
 
 .boton-buscar {
   height: 48px;
-  min-width: 84px;
+  min-width: 100px;
   background-color: var(--color-primario);
   border-radius: 8px;
   border: none;
-  padding: 0 20px;
+  padding: 0 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: var(--color-texto);
+  color: white;
   cursor: pointer;
-  margin: 1px 8px 1px 0;
+  margin: 4px;
   font-family: "Plus Jakarta Sans", sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .boton-buscar:hover {
   background-color: var(--color-primario-hover);
+  transform: scale(1.02);
+}
+
+.boton-buscar:active {
+  transform: scale(0.98);
 }
 
 /* Contenido principal */
