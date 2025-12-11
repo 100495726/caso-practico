@@ -515,21 +515,32 @@ footer {
     padding: 12px 20px;
   }
 
-  .navegacion {
-    gap: 24px;
+  .contenedor-header {
+    justify-content: space-between;
   }
 
-  .navegacion a {
-    font-size: 13px;
+  .nav-izquierda {
+    gap: 0;
+  }
+
+  /* Ocultar navegación y elementos desktop */
+  .navegacion,
+  .buscador-header,
+  .botones-auth {
+    display: none;
+  }
+
+  /* Mostrar menú hamburguesa en tablet */
+  .menu-hamburguesa {
+    display: flex;
+  }
+
+  .menu-movil {
+    display: block;
   }
 
   .nav-derecha {
     gap: 16px;
-  }
-
-  .buscador-header {
-    min-width: 120px;
-    max-width: 180px;
   }
 
   /* Hero */
