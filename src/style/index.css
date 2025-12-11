@@ -418,8 +418,12 @@ header {
 }
 
 .tarjeta {
-  flex: 1;
   min-width: 240px;
+  flex: 1;
+}
+
+.tarjeta a {
+  text-decoration: none;
 }
 
 .tarjeta-imagen {

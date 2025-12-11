@@ -93,12 +93,32 @@
   overflow-x: auto;
 }
 
+.tarjeta-destino {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tarjeta-destino:hover {
+  transform: translateY(-4px);
+}
+
 .imagen-destino {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-destino:hover .imagen-destino,
+.tarjeta-recomendado:hover .imagen-recomendado {
+  transform: scale(1.05);
+}
+
+.tarjeta-destino a,
+.tarjeta-recomendado a {
+  text-decoration: none;
 }
 
 .info-destino {
@@ -112,6 +132,12 @@
   font-size: 16px;
   line-height: 24px;
   color: #171412;
+  transition: color 0.3s ease;
+}
+
+.tarjeta-destino:hover .titulo-destino,
+.tarjeta-recomendado:hover .titulo-destino {
+  color: var(--color-primario);
 }
 
 .descripcion-destino {
@@ -132,6 +158,12 @@
 .tarjeta-recomendado {
   width: 300px;
   padding-bottom: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tarjeta-recomendado:hover {
+  transform: translateY(-4px);
 }
 
 .imagen-recomendado {
@@ -140,6 +172,7 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 12px;
+  transition: transform 0.3s ease;
 }
 
 /* ==================== RESPONSIVE - TABLET (768px - 1024px) ==================== */
