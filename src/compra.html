@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Reserva tu aventura - Wanderlust</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style/index.css" />
-    <link rel="stylesheet" href="style/compra.css" />
+    >
+    <link rel="stylesheet" href="style/index.css" >
+    <link rel="stylesheet" href="style/compra.css" >
   </head>
   <body>
     <header>
@@ -29,7 +29,7 @@
           <nav class="navegacion">
             <a href="destinos.html">Destinos</a>
             <a href="comunidad.html">Comunidad</a>
-            <a href="recursos.html">Recursos</a>
+            <a href="otrosrincones.html">Otros rincones</a>
           </nav>
         </div>
         <div class="nav-derecha">
@@ -43,7 +43,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" >
           </div>
           <div class="botones-auth">
             <a href="login.html" class="boton boton-primario">Iniciar sesión</a>
@@ -80,7 +80,7 @@
       <div class="navegacion-movil">
         <a href="destinos.html">Destinos</a>
         <a href="comunidad.html">Comunidad</a>
-        <a href="recursos.html">Recursos</a>
+        <a href="otrosrincones.html">Otros rincones</a>
       </div>
       <div class="buscador-movil">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -92,7 +92,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        <input type="text" placeholder="Buscar..." />
+        <input type="text" placeholder="Buscar..." >
       </div>
       <div class="botones-movil">
         <a href="login.html" class="boton boton-primario">Iniciar sesión</a>
@@ -125,9 +125,18 @@
               <option value="maldivas">Islas Maldivas</option>
               <option value="sahara">Desierto del Sahara</option>
               <option value="alpes">Alpes</option>
+              <option value="patagonia">Patagonia, Chile</option>
+              <option value="bali">Bali, Indonesia</option>
+              <option value="machu-picchu">Machu Picchu, Perú</option>
+              <option value="santorini">Santorini, Grecia</option>
+              <option value="kioto">Kioto, Japón</option>
+              <option value="roma">Roma, Italia</option>
+              <option value="amazonas">Amazonas, Brasil</option>
+              <option value="banff">Parque Nacional Banff, Canadá</option>
+              <option value="fiordos-noruegos">Fiordos Noruegos</option>
+              <option value="isla-pascua">Isla de Pascua, Chile</option>
             </select>
           </div>
-
           <!-- Fechas -->
           <div class="campo-grupo-doble">
             <div class="campo-grupo">
@@ -137,9 +146,8 @@
                 id="fechaSalida"
                 name="fechaSalida"
                 class="campo-input"
-                placeholder="Selecciona fecha"
                 required
-              />
+              >
             </div>
             <div class="campo-grupo">
               <label for="fechaRegreso">Fecha de regreso</label>
@@ -148,15 +156,13 @@
                 id="fechaRegreso"
                 name="fechaRegreso"
                 class="campo-input"
-                placeholder="Selecciona fecha"
                 required
-              />
+              >
             </div>
           </div>
 
           <!-- Viajeros -->
           <h2 class="seccion-titulo">Viajeros</h2>
-
           <div class="campo-grupo">
             <label for="nombreViajero1">Nombre del viajero 1</label>
             <input
@@ -166,9 +172,8 @@
               class="campo-input"
               placeholder="Ingresa nombre"
               required
-            />
+            >
           </div>
-
           <div class="campo-grupo">
             <label for="emailViajero1">Correo electrónico del viajero 1</label>
             <input
@@ -178,9 +183,8 @@
               class="campo-input"
               placeholder="Ingresa correo electrónico"
               required
-            />
+            >
           </div>
-
           <div class="campo-grupo">
             <label for="nacionalidadViajero1">Nacionalidad del viajero 1</label>
             <input
@@ -190,9 +194,8 @@
               class="campo-input"
               placeholder="Ingresa nacionalidad"
               required
-            />
+            >
           </div>
-
           <div class="campo-grupo">
             <label for="nombreViajero2">Nombre del viajero 2</label>
             <input
@@ -201,9 +204,8 @@
               name="nombreViajero2"
               class="campo-input"
               placeholder="Ingresa nombre"
-            />
+            >
           </div>
-
           <div class="campo-grupo">
             <label for="emailViajero2">Correo electrónico del viajero 2</label>
             <input
@@ -212,9 +214,8 @@
               name="emailViajero2"
               class="campo-input"
               placeholder="Ingresa correo electrónico"
-            />
+            >
           </div>
-
           <div class="campo-grupo">
             <label for="nacionalidadViajero2">Nacionalidad del viajero 2</label>
             <input
@@ -223,9 +224,8 @@
               name="nacionalidadViajero2"
               class="campo-input"
               placeholder="Ingresa nacionalidad"
-            />
+            >
           </div>
-
           <div class="campo-grupo">
             <label for="telefono">Número de teléfono de contacto</label>
             <input
@@ -235,12 +235,9 @@
               class="campo-input"
               placeholder="Ingresa número de teléfono"
               required
-            />
+            >
           </div>
-
-          <!-- Preferencias de Vuelo -->
           <h2 class="seccion-titulo">Preferencias de Vuelo</h2>
-
           <div class="campo-grupo">
             <label for="asiento">Preferencia de Asiento</label>
             <select id="asiento" name="asiento" class="campo-input" required>
@@ -252,7 +249,6 @@
               <option value="indiferente">Indiferente</option>
             </select>
           </div>
-
           <div class="campo-grupo">
             <label for="comida">Preferencia de Comida</label>
             <select id="comida" name="comida" class="campo-input" required>
@@ -265,10 +261,8 @@
               <option value="regular">Regular</option>
             </select>
           </div>
-
           <!-- Información de la Mascota -->
           <h2 class="seccion-titulo">Información de la Mascota</h2>
-
           <div class="campo-grupo">
             <label for="tipoMascota">Tipo de Mascota</label>
             <select id="tipoMascota" name="tipoMascota" class="campo-input">
@@ -291,7 +285,6 @@
 
           <!-- Alergias e Intolerancias -->
           <h2 class="seccion-titulo">Alergias e Intolerancias</h2>
-
           <div class="campo-grupo">
             <label for="alergias"
               >Especifica cualquier alergia o intolerancia</label

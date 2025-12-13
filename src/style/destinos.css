@@ -175,7 +175,7 @@
   transition: transform 0.3s ease;
 }
 
-/* ==================== RESPONSIVE - TABLET (768px - 1024px) ==================== */
+/* RESPONSIVE - TABLET (768px - 1024px) */
 @media (max-width: 1024px) {
   .titulo-principal {
     font-size: 28px;
@@ -202,7 +202,7 @@
   }
 }
 
-/* ==================== RESPONSIVE - MOBILE (hasta 767px) ==================== */
+/* RESPONSIVE - MOBILE (hasta 767px)  */
 @media (max-width: 767px) {
   .seccion-titulo {
     padding: 12px;
@@ -266,7 +266,7 @@
   }
 }
 
-/* ==================== RESPONSIVE - MOBILE PEQUEÑO (hasta 480px) ==================== */
+/*  RESPONSIVE - MOBILE PEQUEÑO (hasta 480px)  */
 @media (max-width: 480px) {
   .grid-destinos-populares {
     grid-template-columns: 1fr;

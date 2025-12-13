@@ -189,7 +189,7 @@
   transform: scale(0.98);
 }
 
-/* ==================== RESPONSIVE - TABLET (768px - 1024px) ==================== */
+/* RESPONSIVE - TABLET (768px - 1024px)  */
 @media (max-width: 1024px) {
   .contenido-compra {
     padding: 40px 40px;
@@ -211,7 +211,7 @@
   }
 }
 
-/* ==================== RESPONSIVE - MOBILE (hasta 767px) ==================== */
+/*  RESPONSIVE - MOBILE (hasta 767px)  */
 @media (max-width: 767px) {
   .contenido-compra {
     padding: 20px 16px;
@@ -251,12 +251,12 @@
 
   .campo-input {
     height: 48px;
-    font-size: 16px; /* Evita zoom en iOS */
+    font-size: 16px; 
   }
 
   .campo-textarea {
     min-height: 100px;
-    font-size: 16px; /* Evita zoom en iOS */
+    font-size: 16px; 
   }
 
   .boton-contenedor {

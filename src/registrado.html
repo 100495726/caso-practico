@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zona privada - Wanderlust</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Wanderlust</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style/index.css" />
-    <link rel="stylesheet" href="style/registrado.css" />
+    >
+    <link rel="stylesheet" href="style/index.css" >
   </head>
   <body class="pagina-registrado">
     <header>
@@ -29,9 +28,10 @@
           <nav class="navegacion">
             <a href="destinos.html">Destinos</a>
             <a href="comunidad.html">Comunidad</a>
-            <a href="recursos.html">Recursos</a>
+            <a href="otrosrincones.html">Otros rincones</a>
           </nav>
         </div>
+
         <div class="nav-derecha">
           <div class="buscador-header">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -43,14 +43,14 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search" >
           </div>
+
           <div class="botones-auth">
             <a href="login.html" class="boton boton-primario">Iniciar sesión</a>
-            <a href="registro.html" class="boton boton-secundario"
-              >Registrarse</a
-            >
+            <a href="registro.html" class="boton boton-secundario">Registrarse</a>
           </div>
+
           <!-- Botón menú hamburguesa -->
           <button class="menu-hamburguesa" aria-label="Abrir menú">
             <span></span>
@@ -80,7 +80,7 @@
       <div class="navegacion-movil">
         <a href="destinos.html">Destinos</a>
         <a href="comunidad.html">Comunidad</a>
-        <a href="recursos.html">Recursos</a>
+        <a href="otrosrincones.html">Otros rincones</a>
       </div>
       <div class="buscador-movil">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -92,7 +92,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        <input type="text" placeholder="Buscar..." />
+        <input type="text" placeholder="Buscar..." >
       </div>
       <div class="botones-movil">
         <a href="login.html" class="boton boton-primario">Iniciar sesión</a>
@@ -101,14 +101,136 @@
     </nav>
 
     <main class="contenido-principal">
-      <section class="registrado-wrap">
-        <h1 id="saludo-usuario">¡Hola!</h1>
-        <p class="registrado-dato">Email: <span id="email-usuario">—</span></p>
-        <p class="registrado-dato">Has accedido a una zona protegida. 🎉</p>
-        <div style="margin-top: 1rem">
-          <a class="boton boton-secundario" href="index.html"
-            >Volver a inicio</a
-          >
+      <section class="hero">
+        <div class="hero-contenido">
+          <h1 class="hero-titulo">Descubre tu próxima aventura</h1>
+          <p class="hero-subtitulo">
+            Encuentra destinos emocionantes y experiencias inolvidables para tu
+            próximo viaje.
+          </p>
+          <div class="buscador-hero">
+            <div class="buscador-icono">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M17.5 17.5L13.875 13.875M16 9C16 12.866 12.866 16 9 16C5.13401 16 2 12.866 2 9C2 5.13401 5.13401 2 9 2C12.866 2 16 5.13401 16 9Z"
+                  stroke="#8a7361"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              placeholder="Busca  tu destino"
+              class="buscador-input"
+            >
+            <button class="boton boton-buscar">Buscar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h2 class="titulo-seccion">Destinos populares</h2>
+        <div class="grid-destinos">
+          <article class="tarjeta">
+            <a href="compra.html?destino=tailandia">
+              <img
+                src="images/destinos/tailandia.webp"
+                alt="Tailandia"
+                class="tarjeta-imagen"
+              >
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-titulo">Tailandia</h3>
+                <p class="tarjeta-descripcion">
+                  Explora templos antiguos y playas exóticas.
+                </p>
+              </div>
+            </a>
+          </article>
+          <article class="tarjeta">
+            <a href="compra.html?destino=maldivas">
+              <img
+                src="images/destinos/maldivas.png"
+                alt="Islas Maldivas"
+                class="tarjeta-imagen"
+              >
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-titulo">Islas Maldivas</h3>
+                <p class="tarjeta-descripcion">
+                  Relájate en las playas paradisíacas.
+                </p>
+              </div>
+            </a>
+          </article>
+          <article class="tarjeta">
+            <a href="compra.html?destino=sahara">
+              <img
+                src="images/destinos/sahara.png"
+                alt="Desierto del Sahara"
+                class="tarjeta-imagen"
+              >
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-titulo">Desierto del Sahara</h3>
+                <p class="tarjeta-descripcion">
+                  Atrévete a cruzar el vasto desierto.
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <h2 class="titulo-seccion">Experiencias destacadas</h2>
+        <div class="grid-experiencias">
+          <article class="tarjeta">
+            <a href="compra.html?destino=alpes">
+              <img
+                src="images/destinos/alpes.png"
+                alt="Senderismo en los Alpes"
+                class="tarjeta-imagen"
+              >
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-titulo">Senderismo en los Alpes</h3>
+                <p class="tarjeta-descripcion">
+                  Disfruta de vistas impresionantes y aire fresco.
+                </p>
+              </div>
+            </a>
+          </article>
+          <article class="tarjeta">
+            <a href="compra.html?destino=buceo">
+              <img
+                src="images/destinos/buceo.png"
+                alt="Buceo en la Gran Barrera de Coral"
+                class="tarjeta-imagen"
+              >
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-titulo">
+                  Buceo en la Gran Barrera de Coral
+                </h3>
+                <p class="tarjeta-descripcion">
+                  Explora la vida marina en un arrecife vibrante.
+                </p>
+              </div>
+            </a>
+          </article>
+          <article class="tarjeta">
+            <a href="compra.html?destino=serengeti">
+              <img
+                src="images/destinos/serengeti.png"
+                alt="Safari en el Serengeti"
+                class="tarjeta-imagen"
+              >
+              <div class="tarjeta-info">
+                <h3 class="tarjeta-titulo">Safari en el Serengeti</h3>
+                <p class="tarjeta-descripcion">
+                  Observa la fauna salvaje en su hábitat natural.
+                </p>
+              </div>
+            </a>
+          </article>
         </div>
       </section>
     </main>
@@ -116,16 +238,48 @@
     <footer>
       <div class="footer-contenedor">
         <nav class="footer-nav">
-          <a href="#">Acerca de</a><a href="#">Servicios</a
-          ><a href="#">Contacto</a><a href="#">Política de privacidad</a>
+          <a href="#">Acerca de</a>
+          <a href="#">Servicios</a>
+          <a href="#">Contacto</a>
+          <a href="#">Política de privacidad</a>
         </nav>
+        <div class="redes-sociales">
+          <a href="#" class="red-social">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
+                fill="#8a7361"
+              />
+            </svg>
+          </a>
+          <a href="#" class="red-social">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z"
+                fill="#8a7361"
+              />
+              <path d="M6 9H2V21H6V9Z" fill="#8a7361" />
+              <path
+                d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z"
+                fill="#8a7361"
+              />
+            </svg>
+          </a>
+          <a href="#" class="red-social">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12 4C16.418 4 20 7.582 20 12C20 16.418 16.418 20 12 20C7.582 20 4 16.418 4 12C4 7.582 7.582 4 12 4ZM11 7V12.414L14.293 15.707L15.707 14.293L13 11.586V7H11Z"
+                fill="#8a7361"
+              />
+            </svg>
+          </a>
+        </div>
         <p class="copyright">
           © 2025 Wanderlust. Todos los derechos reservados.
         </p>
       </div>
     </footer>
 
-    <!-- Tu script principal -->
     <script src="script/index.js"></script>
   </body>
 </html>

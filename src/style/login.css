@@ -237,7 +237,7 @@
   color: #ffffff;
 }
 
-/* ==================== RESPONSIVE - TABLET (768px - 1024px) ==================== */
+/*  RESPONSIVE - TABLET (768px - 1024px)  */
 @media (max-width: 1024px) {
   .contenido-login {
     padding: 32px 40px;
@@ -257,7 +257,7 @@
   }
 }
 
-/* ==================== RESPONSIVE - MOBILE (< 768px) ==================== */
+/* RESPONSIVE - MOBILE (< 768px)  */
 @media (max-width: 767px) {
   .contenido-login {
     padding: 20px 16px;
