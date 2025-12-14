@@ -1,6 +1,35 @@
 // Funcionalidad de búsqueda de destinos
 document.addEventListener("DOMContentLoaded", function () {
   const inputBuscador = document.querySelector(".input-buscador");
+  const inputBuscadorHeader = document.querySelector(".buscador-header input");
+
+  // Funcionalidad de búsqueda global desde el header
+  // Si estamos en cualquier página que NO es destinos.html, redirigimos
+  if (inputBuscadorHeader) {
+    const esDestinosPage = window.location.pathname.includes("destinos.html");
+
+    inputBuscadorHeader.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const termino = this.value.trim();
+        if (termino) {
+          // Redirigir a destinos.html con el parámetro de búsqueda
+          const urlBase = esDestinosPage ? "destinos.html" : "destinos.html";
+          window.location.href = `${urlBase}?buscar=${encodeURIComponent(
+            termino
+          )}`;
+        }
+      }
+    });
+
+    // Si estamos en destinos.html, sincronizar con el buscador principal
+    if (esDestinosPage && inputBuscador) {
+      inputBuscadorHeader.addEventListener("input", function () {
+        inputBuscador.value = this.value;
+        inputBuscador.dispatchEvent(new Event("input"));
+      });
+    }
+  }
 
   if (!inputBuscador) return;
 
@@ -107,4 +136,20 @@ document.addEventListener("DOMContentLoaded", function () {
   inputBuscador.addEventListener("input", function (e) {
     buscarDestinos(e.target.value);
   });
+
+  // Leer parámetro de búsqueda de la URL (cuando se viene desde otra página)
+  const urlParams = new URLSearchParams(window.location.search);
+  const buscarParam = urlParams.get("buscar");
+  if (buscarParam) {
+    inputBuscador.value = buscarParam;
+    // También actualizar el buscador del header si existe
+    if (inputBuscadorHeader) {
+      inputBuscadorHeader.value = buscarParam;
+    }
+    // Ejecutar la búsqueda
+    buscarDestinos(buscarParam);
+    // Hacer scroll al buscador principal
+    inputBuscador.scrollIntoView({ behavior: "smooth", block: "center" });
+    inputBuscador.focus();
+  }
 });

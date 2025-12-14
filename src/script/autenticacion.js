@@ -225,8 +225,10 @@ function renderHeaderAuth() {
     const texto = esRegistrado ? `Bienvenido ${nombre}` : `Hola, ${nombre}`;
 
     box.innerHTML = `
-      <span class="usuario-saludo" style="margin-right:.5rem">${texto}</span>
-      <button id="btn-logout" class="boton boton-secundario">Cerrar sesión</button>
+      <div class="usuario-logueado">
+        <span class="usuario-saludo">${texto}</span>
+        <button id="btn-logout" class="boton boton-secundario">Cerrar sesión</button>
+      </div>
     `;
 
     document.getElementById("btn-logout")?.addEventListener("click", () => {
