@@ -206,13 +206,13 @@ header {
   outline: none;
   font-size: 16px;
   line-height: 24px;
-  color: #8a7361;
+  color: #2c2926;
   margin-left: 8px;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .menu-movil .buscador-movil input::placeholder {
-  color: #8a7361;
+  color: #2c2926;
 }
 
 .menu-movil .botones-movil {
@@ -253,13 +253,13 @@ header {
   outline: none;
   font-size: 16px;
   line-height: 24px;
-  color: #8a7361;
+  color: #2c2926;
   margin-left: 8px;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .buscador-header input::placeholder {
-  color: #8a7361;
+  color: #2c2926;
 }
 
 .botones-auth {
@@ -402,7 +402,7 @@ header {
 }
 
 .buscador-input::placeholder {
-  color: #8a7361;
+  color: #2c2926;
 }
 
 .boton-buscar {
@@ -415,7 +415,7 @@ header {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: white;
+  color: 000;
   cursor: pointer;
   margin: 4px;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -497,14 +497,14 @@ header {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: #8a7361;
+  color: #2c2926;
 }
 
 /* Footer */
 footer {
-  padding: 40px 20px;
-  max-width: 960px;
-  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+  margin: 40px auto 0px auto;
+  border-top: 1px solid #e5e8eb;
 }
 
 .footer-contenedor {
@@ -526,7 +526,7 @@ footer {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #8a7361;
+  color: #2c2926;
   text-decoration: none;
   min-width: 160px;
   text-align: center;
@@ -550,7 +550,7 @@ footer {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #8a7361;
+  color: #2c2926;
   text-align: center;
 }
 
